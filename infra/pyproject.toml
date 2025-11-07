@@ -1,0 +1,20 @@
+[project]
+name = "infra"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Leonard Schuler", email = "31131665+LeonardSchuler@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "aws-cdk-lib>=2.0.0",
+    "constructs>=10.4.3",
+]
+
+[project.scripts]
+infra = "infra:main"
+
+[build-system]
+requires = ["uv_build>=0.9.7,<0.10.0"]
+build-backend = "uv_build"
