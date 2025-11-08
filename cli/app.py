@@ -2,9 +2,10 @@ import os
 from flask import Flask, redirect, url_for
 from authlib.integrations.flask_client import OAuth
 from pprint import pprint
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
-load_dotenv()
+load_dotenv(find_dotenv(".env"))
+load_dotenv(find_dotenv(".env.infra"))
 
 
 app = Flask(__name__)
