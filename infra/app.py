@@ -4,8 +4,12 @@ import os
 
 from aws_cdk import App, Stack, aws_cognito as cognito, CfnOutput
 from constructs import Construct
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv(".env"))
 
 COGNITO_DOMAIN_PREFIX = os.environ["COGNITO_DOMAIN_PREFIX"]
+print(COGNITO_DOMAIN_PREFIX)
 
 
 class UserDirectory(Stack):
